@@ -1,0 +1,271 @@
+/*
+.container-fluid{
+  border: 3px solid black;
+}
+.row{
+  border: 2px solid brown;
+}
+
+.col{
+	border: 2px solid green;
+}
+
+.col-11,.col-4,.col-2,.col-3,.col-1,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-12
+{
+	border: 2px solid green;
+}
+
+.pink{
+	background-color: pink;
+	font-size: 20px;
+}
+.blue{
+	background-color: blue;
+}
+.yellow{
+	background-color: yellow;
+	font-size: 18px;
+}
+.red{
+	background-color: red;
+}
+.green{
+	background-color: green;
+	font-size: 5px;
+}
+
+.hgt{
+	border-color: black;
+    height: 400px;
+}
+
+*/
+
+.body{
+	margin: 0px;
+}
+
+.logo                                              
+{
+	max-width: 12em;
+}
+/*
+.row{
+	margin-bottom:0.5em;
+}
+*/
+
+.ph{                                               
+	text-align: center;
+	font-size: xx-large;
+}
+
+.house{                                             
+    max-width: 2.4em;
+    border: 2px solid midnightblue;
+    border-radius: 34%;
+    padding: 3px;
+    border-style: groove;
+}
+.brd{
+   border: 2px solid black;
+   border-radius: 0%;
+}
+
+.home                                              
+{
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    margin-left: 0.3vw;
+    border: 2px solid #26a6cb;
+    padding: 3px;
+    background-color: #26a6cb;
+    border-radius: 10%;
+    border-style: outset;
+}
+
+
+
+@keyframes pulse{
+   0%{transform: scale(1);}
+   50%{transform: scale(1.1);}
+   100%{transform: scale(1);}
+}
+
+.home:hover, .btngrp:hover{
+	color: black; 
+	text-decoration: none;
+	animation-name: pulse ;
+}
+
+.btngrp{                                                     
+    margin-top: 0.5em;
+    padding: 9px;
+    background-color: #60e660;
+    color: white;
+    font-size: 1em;
+    font-family: sans-serif;
+    border-color: #60e660;
+    cursor: pointer;
+}
+
+.btnpost{                                                    
+    margin-top: 0.3em;
+    margin-left: 1.4vw;
+}
+
+.hd{                                                    
+    text-align: center;
+    color: brown;
+    font-family: cursive;
+}
+
+
+
+.col:hover{
+  border-bottom: 2px solid brown;
+}
+
+.rightc{
+   
+}
+
+.middle{
+   background-color: dimgrey;
+   border: 1px solid;
+   height: fit-content;
+}
+
+.col{
+    padding: 0px 4px;
+    margin: 1px 4px;
+    text-align: center;
+}
+
+.contrl{
+    border: 1px solid blanchedalmond;
+    background-color: darkseagreen;
+    padding: 10px;
+}
+
+.invic{
+   border: 1px solid brown;
+   height: 440px;
+   margin: 3px;
+}
+
+.bkg{
+      background-color: darkkhaki;
+      border-style: ridge;
+} 
+
+.ph1{
+  cursor: pointer;
+  width:100%;
+  height: 441px;
+  object-fit:cover;
+}
+
+.col-lg-6{
+  padding: 3px;
+}
+
+.fig{
+  position: relative;
+  background-color: white;
+  position: relative;
+}
+/*
+.heart-shape{
+  width: 31px;
+  margin: 8px;
+  cursor: pointer;
+}
+*/
+.heart { 
+    width: 4.4vw;
+    height: 50px; 
+    cursor: pointer;
+} 
+
+.heart:before, .heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 21px;
+    top: 9px;
+    width: 21px;
+    height: 30px;
+    background-color: darkgray;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%; 
+} 
+
+.heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+
+@keyframes beat{
+  to { transform: scale(0.3); }
+}
+
+@-webkit-keyframes beatOut {
+to { transform: scale(0.3); }
+}
+
+.changed:after, .changed:before{
+  background-color: crimson;
+  animation-name: beat;
+  animation-duration: .25s; 
+}
+
+.beatout:after, .beatout:before{
+  animation-name: beatOut;
+  animation-duration: .25s; 
+}
+
+#fileLoader{
+  display: none;
+}
+
+#btnOpenFileDialog{
+  outline: none;
+  max-width: 23%;
+  margin-left: 3vw;
+  margin-top: 1em;
+}
+#fileLoaders{
+  display: none;
+}
+
+#btnOpenFileDialogs{
+  outline: none;
+  max-width: 5%;
+  margin-left: 50%;
+  margin-top: 1em;
+}
+
+.last-div{
+  background-color:darkkhaki;
+}
+
+.three-dots{
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+  margin-left: auto;
+  padding-left: 5px;
+}
+.dele{
+ position: absolute;
+ right: 30px;
+ top: 8px;
+ border: 1px solid black;
+ margin: 9px 0px;
+ padding: 3px 35px;
+ font-family: cursive;
+ cursor: pointer;
+}
