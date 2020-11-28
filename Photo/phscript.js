@@ -110,7 +110,12 @@ $('.three-dots').on('click',function(e){
 });
 
 //delete the pic
-$('dele').on('click',function(){
-   
+$(document).on('click','.dele',function(e){
+  if(confirm("Want to delete?")){
+  	$(e.target).closest('div[class="col-lg-6"]').remove();  
+	   	return true;
+	   }    
+	   return false;
+ 
 });
 });
