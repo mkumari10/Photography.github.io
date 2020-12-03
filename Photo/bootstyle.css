@@ -1,46 +1,3 @@
-/*
-.container-fluid{
-  border: 3px solid black;
-}
-.row{
-  border: 2px solid brown;
-}
-
-.col{
-	border: 2px solid green;
-}
-
-.col-11,.col-4,.col-2,.col-3,.col-1,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-12
-{
-	border: 2px solid green;
-}
-
-.pink{
-	background-color: pink;
-	font-size: 20px;
-}
-.blue{
-	background-color: blue;
-}
-.yellow{
-	background-color: yellow;
-	font-size: 18px;
-}
-.red{
-	background-color: red;
-}
-.green{
-	background-color: green;
-	font-size: 5px;
-}
-
-.hgt{
-	border-color: black;
-    height: 400px;
-}
-
-*/
-
 .body{
 	margin: 0px;
 }
@@ -268,4 +225,46 @@ to { transform: scale(0.3); }
  padding: 3px 35px;
  font-family: cursive;
  cursor: pointer;
+}
+
+.comment{
+    content: "";
+    background-color: cadetblue;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 69% 0, 70% 48%, 51% 50%, 51% 65%, 26% 48%, 0 48%);
+    position: absolute;
+    left: 48px;
+    top: 0.5em;
+}
+
+/* Comment box */
+.combox{
+    border: 1px solid black;
+    margin-left: -4vw;
+    margin-top: 3.4em;
+    padding: 7px;
+    height: -webkit-fill-available;
+    width: 90%;
+}
+
+/*Post button*/
+.postButton:focus{
+  outline: none;
+  color: grey;
+}
+
+.postButton{
+    width: 69px;
+    margin-left: 1px;
+    border-style: none;
+    font-family: system-ui;
+    background-color: white;
+    font-weight: 600;
+}
+
+/* Posted message div */
+.postdone{
+  margin-bottom: 8px;
 }
