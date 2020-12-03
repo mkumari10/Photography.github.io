@@ -118,4 +118,37 @@ $(document).on('click','.dele',function(e){
 	   return false;
  
 });
+//comment box
+$('.comment').on("click",function(e){
+	$(e.target).css('background-color','currentColor');
+     let $Container = $(e.target).siblings('.combox');
+    if(!$Container.length){
+    let box = `
+    <div class="combox">
+     <form action="comments_store.php" method="POST">
+       <div style="display: flex;">           
+        <input type="text" name="reviews" placeholder="Comments.." autocomplete = "off" spellcheck="false" style="flex:1; outline:none;"/>
+        <button type="submit" name="Post" class="postButton">Post</button>
+       </div>
+     </form>
+    </div>`;
+    $(this).after(box);
+   }
+   else{
+   	$(this).siblings('.combox').remove();
+   	$(e.target).css('background-color','cadetblue');
+   }
+});
+
+//functionality of post button
+$(document).on('click','.postButton',function(e){
+  e.preventDefault();
+  let value = $('input[type="text"]').val();
+  let box = `<div class="postdone">${value}</div>`;
+      if($('.combox').children().hasClass('postdone'))
+          $('.combox').find('.postdone').last().append(box);
+      else
+          $('.combox').last().prepend(box);
+   $('input[type="text"]').val("");
+});
 });
