@@ -135,7 +135,7 @@ $(document).on('click','.postButton',function(e){
   //console.log($(`#${$ids}`).find('input[type="text"]'));
   let uname = "Anju";
   let box = `<div class="postdone">
-              <span><img src="images/iconfinder_expand-color-web2-23_5049207.svg" class="profile_pic"></span>
+              <span><img src="iconfinder_expand-color-web2-23_5049207.svg" class="profile_pic"></span>
               <h5 class="username">${uname}:</h5>
               ${value}
             </div>`;
