@@ -1,5 +1,6 @@
 .body{
 	margin: 0px;
+	background-color: darkslategray;
 }
 
 .logo                                              
@@ -15,6 +16,13 @@
 .ph{                                               
 	text-align: center;
 	font-size: xx-large;
+	font-family:Franklin Gothic Heavy;
+        background-color: aliceblue;
+        background-image: linear-gradient(to top, #d1950e, #acbc56, #98d7a1, #afe8dc, #e8f4f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
 }
 
 .house{                                             
@@ -23,6 +31,7 @@
     border-radius: 34%;
     padding: 3px;
     border-style: groove;
+    outline: none;
 }
 .brd{
    border: 2px solid black;
@@ -31,14 +40,16 @@
 
 .home                                              
 {
+    display: inherit;
     text-decoration: none;
+    text-align: center;
     font-size: 1em;
-    color: white;
+    color: white; 
+    outline-style: outset;
     margin-left: 0.3vw;
-    border: 2px solid #26a6cb;
+    border: 2px solid #ffffff;
     padding: 3px;
-    background-color: #26a6cb;
-    border-radius: 10%;
+    background-color: #704646;
     border-style: outset;
 }
 
@@ -49,21 +60,24 @@
    50%{transform: scale(1.1);}
    100%{transform: scale(1);}
 }
-
+/*
 .home:hover, .btngrp:hover{
 	color: black; 
 	text-decoration: none;
 	animation-name: pulse ;
 }
-
-.btngrp{                                                     
+*/
+.btngrp{   
+    outline: none;
+    display: inline-block;
+    width: -webkit-fill-available;
     margin-top: 0.5em;
     padding: 9px;
-    background-color: #60e660;
-    color: white;
+    background-color: darkkhaki;
+    color: black;
     font-size: 1em;
-    font-family: sans-serif;
-    border-color: #60e660;
+    font-family: system-ui;
+    border-color: aliceblue;
     cursor: pointer;
 }
 
@@ -71,6 +85,13 @@
     margin-top: 0.3em;
     margin-left: 1.4vw;
 }
+
+.btngrp:active { 
+            transform: scale(0.98); 
+            /* Scaling button to 0.98 to its original size */ 
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+            /* Lowering the shadow */ 
+} 
 
 .hd{                                                    
     text-align: center;
@@ -82,10 +103,6 @@
 
 .col:hover{
   border-bottom: 2px solid brown;
-}
-
-.rightc{
-   
 }
 
 .middle{
@@ -111,12 +128,12 @@
    height: 440px;
    margin: 3px;
 }
-
+/*
 .bkg{
       background-color: darkkhaki;
       border-style: ridge;
 } 
-
+*/
 .ph1{
   cursor: pointer;
   width:100%;
@@ -151,17 +168,17 @@
     content: ""; 
     left: 21px;
     top: 9px;
-    width: 21px;
-    height: 30px;
+    width: 20px;
+    height: 28px;
     background-color: darkgray;
     border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
+    transform: rotate(-52deg);
     transform-origin: 0 100%; 
 } 
 
 .heart:after { 
     left: 0; 
-    transform: rotate(45deg); 
+    transform: rotate(52deg); 
     transform-origin :100% 100%; 
 }
 
@@ -188,21 +205,13 @@ to { transform: scale(0.3); }
   display: none;
 }
 
-#btnOpenFileDialog{
+#btnFileDialog{
   outline: none;
-  max-width: 23%;
-  margin-left: 3vw;
+  max-width: 87%;
   margin-top: 1em;
 }
 #fileLoaders{
   display: none;
-}
-
-#btnOpenFileDialogs{
-  outline: none;
-  max-width: 5%;
-  margin-left: 50%;
-  margin-top: 1em;
 }
 
 .last-div{
@@ -268,3 +277,23 @@ to { transform: scale(0.3); }
 .postdone{
   margin-bottom: 8px;
 }
+
+/* Profile Pics */
+.profile_pic{
+  max-width: 7%;
+  border-radius: 50%;
+  max-width: 7%;
+  margin: 2px 0px;
+}
+
+/*user name styling*/
+.username{
+  display: inline;
+  font-size: unset;
+}
+
+/*Active link*/
+.direct a.active{
+ outline-style: inset;
+}
+
