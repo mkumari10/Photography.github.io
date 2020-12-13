@@ -120,11 +120,11 @@ $(document).on("click",'.comment',function(e){
    	$(e.target).css('background-color','cadetblue');
    }
 });
-
+/*
     $('input[type="text"]').emojioneArea({
      pickerPosition:"bottom"
    });
-
+*/
 //functionality of post button
 $(document).on('click','.postButton',function(e){
   e.preventDefault();
