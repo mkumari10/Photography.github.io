@@ -1,22 +1,19 @@
 $(document).ready(function(){
 
-//hpage = $('.pics > div').clone(true);	
-//open a setting tab
-$('#set').on('click',function(){
-       alert("setting");
-});
+//open the page according the button we clicked
+$('.direct a').on('click',function(e){
+   e.preventDefault();
+   $(".pics").hide();
+   var toShow = $(this).attr('href');
+   $(toShow).show();
+})
 
-//post 
-$('#post').on('click',function(){
-      alert("profile");  
-});
-
-//invitation card
-$('.invitation').on('click',function(e){
-      let inv = '<h1>INVITATION CARD</h1>';
-      $('.pics').replaceWith(inv);
-});
-
+//active link
+$('.home').on('click',function(e){
+  $(this).siblings().removeClass('active')
+  $(this).addClass('active');
+})	
+	
 //log out
 $('.logout').on('click',function(){
 	   if(confirm('Are you sure you want to logout?')){
@@ -30,74 +27,59 @@ $('.house').on('tap',function(){
     alter('Tapped');	
 });
 
-//background color gets change of Icons
+/*background color gets change of Icons
 $('.house').on('focus',function(e){
 	var $el=$(e.target);
     $el.addClass('bkg');
+}); */
+
+//brower file opening function
+$('.btnOpenFileDialogs').on("click",function(e){
+	   e.preventDefault();
+       $("#fileLoader").click();
 });
 
-/*add a div in middle div
-$('.IC').on('click',function(e){
-	if(!($('.middle > div').length))
-	{ 
-	  $('.middle').append('<div class="col invic"></div>');	
-	}   
-});
-*/
-//Append the homepage in middle column
-$('.homepage').on('click',function(e){
-   $('.pics > div').replaceWith(hpage);
-});
-
-
+//select the image from the file
+$('input[type="file"]').change(function(e){
+            var fileName = URL.createObjectURL(event.target.files[0]);
+            if(fileName){
+            let imgContainer = `<div class="col-lg-6">
+             <img src="${fileName}" class="ph1 img-fluid">
+             <div class="row m-0 fig" >
+             <div class="heart"></div>
+             <div class="comment"></div>
+             <div class="three-dots">
+             &#10247;
+             </div>
+             </div>
+             </div>`
+            $('#picspage').last().append(imgContainer); 
+            }
+        });	
+	
 //heart shape click event
-$('.heart').on('click',function(e){
+$(document).on('click','.heart',function(e){
  //   $(this).hasClass('changed') ? $(this).removeClass('changed').addClass('beatout') : $(this).addClass('changed');  
     if($(this).hasClass('changed'))
     {
-    	$(this).removeClass('changed').addClass('beatout');    }
+      $(this).removeClass('changed').addClass('beatout');    }
     else{
-    	$(this).addClass('changed');
+      $(this).addClass('changed');
     }
 });
 
-$('.heart').on('animationend',function(e){
+$(document).on('animationend','.heart',function(e){
    if($('.changed').attr('animation-name') == 'beat'){
-   	$(this).hasClass('changed').css('animation-name','none');
+     $(this).hasClass('changed').css('animation-name','none');
    }
    else if($('.beatout').attr('animation-name') == 'beatOut'){
-   	$(this).hasClass('beatout').css('animation-name','none');
+     $(this).hasClass('beatout').css('animation-name','none');
    }
-});
-
-//brower file opening function
-$('#btnOpenFileDialog').on("click",function(e){
-	   e.preventDefault();
-       $("#fileLoader").click();
-       /*
-       if (e.files && e.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#blah')
-                    .attr('src', e.target.result)
-                    .width(150)
-                    .height(200);
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }*/
-});
-
-//brower file opening function
-$('#btnOpenFileDialogs').on("click",function(e){
-	   e.preventDefault();
-       $("#fileLoaders").click();
 });
 
 
 //Three dots functionality
-$('.three-dots').on('click',function(e){
+$(document).on('click','.three-dots',function(e){
   // $(this).css('background-color','gainsboro');
    var $delContainer = $(this).siblings('.dele');
    if(!$delContainer.length){
@@ -119,17 +101,16 @@ $(document).on('click','.dele',function(e){
  
 });
 //comment box
-$('.comment').on("click",function(e){
+$(document).on("click",'.comment',function(e){
 	$(e.target).css('background-color','currentColor');
      let $Container = $(e.target).siblings('.combox');
+   //  var ids = $(e.target).attr('id');
     if(!$Container.length){
     let box = `
-    <div class="combox">
-     <form action="comments_store.php" method="POST">
-       <div style="display: flex;">           
-        <input type="text" name="reviews" placeholder="Comments.." autocomplete = "off" spellcheck="false" style="flex:1; outline:none;"/>
+    <div class="combox" id="comm${Math.floor(Math.random() * 100) + 1}">
+     <form action="comments_store.php" method="POST" style="display: flex;">
+        <input type="text" name="reviews" placeholder="Comments.." autocomplete="off" spellcheck="false" style="flex:1; outline:none;"/>
         <button type="submit" name="Post" class="postButton">Post</button>
-       </div>
      </form>
     </div>`;
     $(this).after(box);
@@ -140,15 +121,33 @@ $('.comment').on("click",function(e){
    }
 });
 
+    $('input[type="text"]').emojioneArea({
+     pickerPosition:"bottom"
+   });
+
 //functionality of post button
 $(document).on('click','.postButton',function(e){
   e.preventDefault();
-  let value = $('input[type="text"]').val();
-  let box = `<div class="postdone">${value}</div>`;
-      if($('.combox').children().hasClass('postdone'))
-          $('.combox').find('.postdone').last().append(box);
+  var $ids = $(this).closest('div').attr('id');
+ // console.log(`#${$ids}`);
+  let value = $(`#${$ids}`).find('input[type="text"]').val();
+ // console.log(value);
+  //console.log($(`#${$ids}`).find('input[type="text"]'));
+  let uname = "Anju";
+  let box = `<div class="postdone">
+              <span><img src="images/iconfinder_expand-color-web2-23_5049207.svg" class="profile_pic"></span>
+              <h5 class="username">${uname}:</h5>
+              ${value}
+            </div>`;
+      if($(e.target).parent('.combox').children().hasClass('postdone'))
+      {
+          $(e.target).parent('.combox').find('.postdone').last().append(box);
+      }
       else
-          $('.combox').last().prepend(box);
-   $('input[type="text"]').val("");
+      {
+          $(e.target).parent('form').parent('.combox').prepend(box);
+      }
+   $(`#${$ids}`).find('input[type="text"]').val("");
+ //        console.log($(`#${$ids}`).parents('div').find('input[type="text"]').val());
 });
 });
