@@ -296,4 +296,8 @@ to { transform: scale(0.3); }
 .direct a.active{
  outline-style: inset;
 }
+a:hover{
+  text-decoration: none;
+  color: black;
+}
 
