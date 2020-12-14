@@ -10,8 +10,8 @@ $('.direct a').on('click',function(e){
 
 //active link
 $('.home').on('click',function(e){
-  $(this).siblings().removeClass('active')
-  $(this).addClass('active');
+  $('direct > a').removeClass('.direct a.active')
+  $(this).addClass('.direct a.active');
 })	
 	
 //log out
