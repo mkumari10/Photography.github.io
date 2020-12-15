@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photography Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"  href="bootstrap-4.5.2-dist\bootstrap-4.5.2-dist\css\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="emojionearea-master/emojionearea-master/dist/emojionearea.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstyle.css">
+</head>
+  <body>
+  <div class="container-fluid">
+    <div class="row">  
+        <div class="col-2"><img src="LogoMakr_19gZRx.png" class="logo"></div>
+        <div class="col-md-7"><h2 class="ph">Photography</h2></div> 
+        <div class="col-md-3"></div>   
+    </div><br><br>
+    <div class="row flex d-md-none contrl">
+        <div class="col d-md-none w-25 direct"><a href="#picspage" title="HOME"><img src="house.png" alt="house" class="house homepage"></a></div>
+        <div class="col d-md-none direct"><a href="#invitation" title="INVITATION CARD"><img src="invitation.svg" alt="house" class="house invitation"></a></div>
+        <div class="col d-md-none direct"><a href="#profile" title="PROFILE"><img src="user-profile.png" alt="house" class="house"></a></div>
+        <div class="col d-md-none direct"><a href="#" title="GROUP"><img src="user-group.svg" alt="house" class="house"></a></div>
+        <div class="col d-md-none"><a href="page2.html" title="LOG OUT"><img src="logout.png" alt="logout" class="house logout"></a></div>
+        <div class="col d-md-none direct"><a href="#setting" title="setting"><img src="1947697821552644384.svg" alt="setting" class="house"></a></div>
+        <div class="col d-md-none">
+          <form action="/action_page.php">
+           <input type="file" id="fileLoader" name="files" title="Load File" accept="image/jpeg, image/png"/>
+           <input type="image" class="btnOpenFileDialogs house" src="add.png" title="Add post"/>
+         </form>
+        </div>
+
+    </div>
+    <div class="row flex">
+     <div class="col-md-2 d-md-inline d-none">
+       <div class="row mt-5">
+        <div class="col-md-12 mb-2 direct">
+          <a href="#picspage" title="front_page" class="home homepage">Home</a>
+        </div>
+        <div class="col-md-12 mb-2">
+          <a href="page2.html" title="back" class="home logout">Log Out</a>
+        </div> 
+        <div class="col-md-12 mb-2 direct">
+          <a href="#setting" title="setting" class="home" id="set">Setting</a>
+        </div>
+        <div class="col-md-12 direct"><a href="#invitation"><button type="button" class="btngrp">Invitation Card</button></div></a>
+        <div class="col-md-12 direct"><a href="#profile"><button type="button" class="btngrp" id="post">Profile</button></div></a> 
+        <div class="col-md-12 mb-2">
+          <form action="/action_page.php">
+           <input type="file" id="fileLoader" name="files" title="Load File" accept="image/jpeg, image/png"/>
+           <input type="image" id="btnFileDialog" class="btnOpenFileDialogs" src="fileselection.png" title="Add post"/>
+         </form>
+        </div>
+      </div>
+    </div> 
+    <div class="col-md-8 middle">
+      <div class="row pics" id="picspage">
+        <div class="col-lg-6">
+          <img src="IMG_20200323_160842.JPG" class="ph1 img-fluid" id="pic1">
+          <div class="row m-0 fig" >
+            <div class="heart"></div>
+            <div class="comment"></div>
+            <div class="three-dots">&#10247;</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="Screenshot_20200204_142251.jpg" class="ph1 img-fluid" id="pic2">
+          <div class="row m-0 fig">
+            <div class="heart"></div>
+            <div class="comment"></div>
+            <div class="three-dots">
+            &#10247;
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="Screenshot_20200204_142246.jpg" class="ph1 img-fluid" id="pic3">
+          <div class="row m-0 fig" >
+            <div class="heart"></div>
+            <div class="comment"></div>
+            <div class="three-dots">
+            &#10247;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 pics" id="invitation" style="display:none">
+        <div class="col"><h1>Invitation Card</h1></div>
+      </div>
+      <div class="row mt-5 pics" id="setting" style="display:none">
+        <div class="col"><h1>Setting</h1></div>
+      </div>
+      <div class="row mt-5 pics" id="profile" style="display:none">
+        <div class="col"><h1>Profile</h1></div>
+      </div>
+    </div>
+     <div class="col-md-2 rightc">
+     </div>
+ </div>
+  <script src="jquery-3.5.1.js"></script>
+  <script src="emojionearea-master/emojionearea-master/dist/emojionearea.min.js"></script>
+ <script src="phscript.js"></script>
+ </div>
+ </body>
+</html>

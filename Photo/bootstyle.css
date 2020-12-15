@@ -1,0 +1,303 @@
+.body{
+	margin: 0px;
+	background-color: #2f4f4f;
+}
+
+.logo                                              
+{
+	max-width: 12em;
+}
+/*
+.row{
+	margin-bottom:0.5em;
+}
+*/
+
+.ph{                                               
+	text-align: center;
+	font-size: xx-large;
+	font-family:Franklin Gothic Heavy;
+        background-color: aliceblue;
+        background-image: linear-gradient(to top, #d1950e, #acbc56, #98d7a1, #afe8dc, #e8f4f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+}
+
+.house{                                             
+    max-width: 2.4em;
+    border: 2px solid midnightblue;
+    border-radius: 34%;
+    padding: 3px;
+    border-style: groove;
+    outline: none;
+}
+.brd{
+   border: 2px solid black;
+   border-radius: 0%;
+}
+
+.home                                              
+{
+    display: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    color: white; 
+    outline-style: outset;
+    margin-left: 0.3vw;
+    border: 2px solid #ffffff;
+    padding: 3px;
+    background-color: #704646;
+    border-style: outset;
+}
+
+
+
+@keyframes pulse{
+   0%{transform: scale(1);}
+   50%{transform: scale(1.1);}
+   100%{transform: scale(1);}
+}
+/*
+.home:hover, .btngrp:hover{
+	color: black; 
+	text-decoration: none;
+	animation-name: pulse ;
+}
+*/
+.btngrp{   
+    outline: none;
+    display: inline-block;
+    width: -webkit-fill-available;
+    margin-top: 0.5em;
+    padding: 9px;
+    background-color: darkkhaki;
+    color: black;
+    font-size: 1em;
+    font-family: system-ui;
+    border-color: aliceblue;
+    cursor: pointer;
+}
+
+.btnpost{                                                    
+    margin-top: 0.3em;
+    margin-left: 1.4vw;
+}
+
+.btngrp:active { 
+            transform: scale(0.98); 
+            /* Scaling button to 0.98 to its original size */ 
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+            /* Lowering the shadow */ 
+} 
+
+.hd{                                                    
+    text-align: center;
+    color: brown;
+    font-family: cursive;
+}
+
+
+
+.col:hover{
+  border-bottom: 2px solid brown;
+}
+
+.middle{
+   background-color: dimgrey;
+   border: 1px solid;
+   height: fit-content;
+}
+
+.col{
+    padding: 0px 4px;
+    margin: 1px 4px;
+    text-align: center;
+}
+
+.contrl{
+    border: 1px solid blanchedalmond;
+    background-color: darkseagreen;
+    padding: 10px;
+}
+
+.invic{
+   border: 1px solid brown;
+   height: 440px;
+   margin: 3px;
+}
+/*
+.bkg{
+      background-color: darkkhaki;
+      border-style: ridge;
+} 
+*/
+.ph1{
+  cursor: pointer;
+  width:100%;
+  height: 441px;
+  object-fit:cover;
+}
+
+.col-lg-6{
+  padding: 3px;
+}
+
+.fig{
+  position: relative;
+  background-color: white;
+  position: relative;
+}
+/*
+.heart-shape{
+  width: 31px;
+  margin: 8px;
+  cursor: pointer;
+}
+*/
+.heart { 
+    width: 4.4vw;
+    height: 50px; 
+    cursor: pointer;
+} 
+
+.heart:before, .heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 21px;
+    top: 9px;
+    width: 20px;
+    height: 28px;
+    background-color: darkgray;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-52deg);
+    transform-origin: 0 100%; 
+} 
+
+.heart:after { 
+    left: 0; 
+    transform: rotate(52deg); 
+    transform-origin :100% 100%; 
+}
+
+@keyframes beat{
+  to { transform: scale(0.3); }
+}
+
+@-webkit-keyframes beatOut {
+to { transform: scale(0.3); }
+}
+
+.changed:after, .changed:before{
+  background-color: crimson;
+  animation-name: beat;
+  animation-duration: .25s; 
+}
+
+.beatout:after, .beatout:before{
+  animation-name: beatOut;
+  animation-duration: .25s; 
+}
+
+#fileLoader{
+  display: none;
+}
+
+#btnFileDialog{
+  outline: none;
+  max-width: 87%;
+  margin-top: 1em;
+}
+#fileLoaders{
+  display: none;
+}
+
+.last-div{
+  background-color:darkkhaki;
+}
+
+.three-dots{
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+  margin-left: auto;
+  padding-left: 5px;
+}
+.dele{
+ position: absolute;
+ right: 30px;
+ top: 8px;
+ border: 1px solid black;
+ margin: 9px 0px;
+ padding: 3px 35px;
+ font-family: cursive;
+ cursor: pointer;
+}
+
+.comment{
+    content: "";
+    background-color: cadetblue;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 69% 0, 70% 48%, 51% 50%, 51% 65%, 26% 48%, 0 48%);
+    position: absolute;
+    left: 48px;
+    top: 0.5em;
+}
+
+/* Comment box */
+.combox{
+    border: 1px solid black;
+    margin-left: -4vw;
+    margin-top: 3.4em;
+    padding: 7px;
+    height: -webkit-fill-available;
+    width: 90%;
+}
+
+/*Post button*/
+.postButton:focus{
+  outline: none;
+  color: grey;
+}
+
+.postButton{
+    width: 69px;
+    margin-left: 1px;
+    border-style: none;
+    font-family: system-ui;
+    background-color: white;
+    font-weight: 600;
+}
+
+/* Posted message div */
+.postdone{
+  margin-bottom: 8px;
+}
+
+/* Profile Pics */
+.profile_pic{
+  max-width: 7%;
+  border-radius: 50%;
+  max-width: 7%;
+  margin: 2px 0px;
+}
+
+/*user name styling*/
+.username{
+  display: inline;
+  font-size: unset;
+}
+
+/*Active link*/
+.direct a.active{
+ outline-style: inset;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+
